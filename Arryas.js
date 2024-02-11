@@ -50,3 +50,51 @@ console.log("--------------------------------")
 const result4 = numbers.findIndex(x => x == 3);
 console.log(result4) // Output: 2
 console.log("--------------------------------")
+
+// 9. Push(): Añadir un elemento al final de un Array
+
+numbers.push(6);
+console.log(numbers); // Output: [1, 2, 3, 4, 5, 6]
+console.log("--------------------------------")
+
+// 10. Unshift(): Añadir un elemento al principio de un Array
+
+numbers.unshift(0);
+console.log(numbers); // Output: [0, 1, 2, 3, 4, 5, 6]
+console.log("--------------------------------")
+
+// 11. Pop(): Elimina el último elemento de un Array
+
+numbers.pop();
+console.log(numbers); // Output: [1, 2, 3, 4, 5, 6]
+console.log("--------------------------------")
+
+// 12. Shift(): Elimina el primer elemento de un Array
+
+numbers.shift();
+console.log(numbers); // Output: [2, 3, 4, 5, 6]
+console.log("--------------------------------")
+
+// 13. IndexOf(): Encontrar el índice de un elemento del Array
+
+const result5 = numbers.indexOf(3);
+console.log(result5) // Output: 2
+console.log("--------------------------------")
+
+// 14. LastIndexOf(): Encontrar el índice del último elemento del Array
+
+const result6 = numbers.lastIndexOf(3);
+console.log(result6) // Output: 5
+console.log("--------------------------------")
+
+// 15. Slice(): Crea un nuevo array con los elementos de un array original, desde el índice especificado hasta el último índice especificado.
+
+const result7 = numbers.slice(1, 4);
+console.log(result7) // Output: [2, 3, 4]
+console.log("--------------------------------")
+
+// 16. Splice(): Eliminar un único elemento mediante su posición
+
+numbers.splice(2, 1);
+console.log(numbers); // Output: [1, 2, 3, 4]
+console.log("--------------------------------")
