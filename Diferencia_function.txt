@@ -1,0 +1,33 @@
+Las funciones flecha y las funciones regulares en JavaScript tienen varias diferencias clave:
+
+Funciones Regulares:
+
+- Se crean mediante la declaración function, seguida del nombre de la función y un par de paréntesis, entre los cuales se pueden definir los parámetros que recibe la función1.
+- Pueden ser nombradas o anónimas1.
+- Tienen su propio enlace a this2.
+
+Por ejemplo:
+
+function iniciar() {  
+  // Código 
+}
+
+const iniciar = function() {  
+  // Código 
+}
+
+Funciones Flecha:
+
+- Fueron introducidas en la versión ES6 de JavaScript1.
+- No tienen su propio enlace a this2.
+- No se pueden utilizar como constructores2.
+- No son aptas para los métodos call, apply y bind2.
+- Si solo incluyen una sentencia, es posible omitir las llaves de la función1.
+
+Por ejemplo:
+
+const iniciar = () => {  
+  // Código 
+}
+
+const iniciar = param => 'Soy ' + param;
