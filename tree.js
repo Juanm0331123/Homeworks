@@ -57,7 +57,10 @@ person2.addChildren(person3);
 // Imprimir el árbol genealógico
 console.log("Pre-order");
 person1.printPreOrder();
+console.log('-------------------')
 console.log("In-order");
 person1.printInOrder();
+console.log('-------------------')
 console.log("Post-order");
 person1.printPostOrder();
+console.log('-------------------')
