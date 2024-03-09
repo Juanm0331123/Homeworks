@@ -13,30 +13,31 @@ class Node {
         this.age = age;
         this.type = type;
     }
-
 }
 
 class Graph {
     constructor() {
-        this.nodes = [];
-        this.adjList = {};
+        this.nodes = {};
+        this.edges = {};
     }
 
     addNode(node) {
         this.nodes[node.name] = node;
-        this.edges[node] = [];
+        this.edges[node.name] = [];
     }
 
     addEdge(personNode, cityNode) {
         this.edges[personNode.name].push(cityNode.name);
+        this.edges[cityNode.name] = this.edges[cityNode.name] || [];
         this.edges[cityNode.name].push(personNode.name);
     }
 
     getResidents(cityName) {
-        return this.edges[cityName].map(personName => this.nodes[personName]);
+        return this.edges[cityName].filter(nodeName => this.nodes[nodeName].type === 'person').map(personName => this.nodes[personName]);
     }
 }
 
+// Crear nodos para personas
 let person1 = new Node("Juan", 30, "person");
 let person2 = new Node("Ana", 25, "person");
 let person3 = new Node("Carlos", 35, "person");
@@ -61,5 +62,5 @@ graph.addEdge(person2, city1);
 graph.addEdge(person3, city2);
 
 // Obtener la lista de residentes de una ciudad
-console.log(graph.getResidents("Madrid"));  // Debería imprimir los detalles de Juan y Ana
-console.log(graph.getResidents("Barcelona"));  // Debería imprimir los detalles de Carlos
+console.log(graph.getResidents("Madrid"));  // Imprime los detalles de Juan y Ana
+console.log(graph.getResidents("Barcelona"));  // Imprime los detalles de Carlos
